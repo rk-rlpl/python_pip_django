@@ -16,5 +16,13 @@ describe 'python_pip_django::install_virtualenv' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it 'the necessary packages' do
+      expect(chef_run).to install_package('python-pip')
+    end
+
+    it 'installs virtualenv' do
+      expect(chef_run).to run_execute('pip install virtualenv')
+    end
   end
 end
