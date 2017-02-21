@@ -1,7 +1,6 @@
 ---
 driver:
-  name: docker
-  use_sudo: false
+  name: vagrant
 
 provisioner:
   name: chef_zero
@@ -14,7 +13,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
+  - name: gbarbieru/xenial
 
 suites:
   - name: default
@@ -27,6 +26,9 @@ suites:
   - name: install_pip
     run_list:
       - recipe[python_pip_django::install_pip]
+  - name: install_virtualenv
+    run_list:
+      - recipe[python_pip_django::install_virtualenv]
     verifier:
       inspec_tests:
         - test/smoke/default
