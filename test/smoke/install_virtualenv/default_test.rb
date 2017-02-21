@@ -7,6 +7,5 @@
 
 
 describe command('django-admin --version') do
-
-  its(:stdout) { should match(/1.10/)}
+  its(:stdout) { should match(/1.6.1/)}
 end

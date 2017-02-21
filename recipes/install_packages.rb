@@ -1,7 +1,7 @@
 #
 # Cookbook:: python_pip_django
-# Recipe:: default
+# Recipe:: install_packages.rb
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-include_recipe 'python_pip_django::install_packages'
+package 'python-django'
