@@ -23,14 +23,12 @@ suites:
       inspec_tests:
         - test/smoke/default
     attributes:
-<<<<<<< HEAD
   - name: install_pip
     run_list:
       - recipe[python_pip_django::install_pip]
   - name: install_virtualenv
     run_list:
       - recipe[python_pip_django::install_virtualenv]
-=======
 
   - name: install_pip
     run_list:
@@ -44,7 +42,6 @@ suites:
     run_list:
       - recipe[python_pip_django::install_virtualenv]
 
->>>>>>> 8d1ad22732ce78a757da57b35027dc6d5f5c686c
     verifier:
       inspec_tests:
         - test/smoke/default
