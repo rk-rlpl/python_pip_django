@@ -7,9 +7,6 @@
 
 
 describe command('django-admin --version') do
-<<<<<<< HEAD
-  its(:stdout) { should match(/1.8/)}
-=======
   its(:stdout) { should match(/1.10/)}
->>>>>>> install_pip
+
 end
